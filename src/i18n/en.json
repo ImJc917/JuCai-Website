@@ -1,0 +1,66 @@
+{
+  "nav": {
+    "about": "About",
+    "skills": "Skills",
+    "timeline": "Timeline",
+    "guestbook": "Guestbook",
+    "social": "Social",
+    "home": "Home"
+  },
+  "home": {
+    "greeting": "Hi, I'm",
+    "role": "Sophomore · Tech Enthusiast",
+    "subtitle": "Welcome to my personal space",
+    "viewAll": "View All",
+    "moreSocial": "More social links",
+    "cards": {
+      "about": {
+        "title": "About Me",
+        "desc": "Learn more about my story"
+      },
+      "skills": {
+        "title": "Skills & Courses",
+        "desc": "Courses I've taken and skills I've learned"
+      },
+      "timeline": {
+        "title": "Timeline",
+        "desc": "My educational journey"
+      },
+      "guestbook": {
+        "title": "Guestbook",
+        "desc": "Leave your thoughts here"
+      }
+    }
+  },
+  "skills": {
+    "title": "Skills & Courses",
+    "all": "All",
+    "semester": "Semester",
+    "description": "Description"
+  },
+  "timeline": {
+    "title": "Timeline"
+  },
+  "guestbook": {
+    "title": "Guestbook",
+    "subtitle": "Feel free to leave your thoughts and suggestions"
+  },
+  "social": {
+    "title": "Social Links",
+    "subtitle": "You can find me here"
+  },
+  "footer": {
+    "copyright": "© 2026 {name}. All rights reserved."
+  },
+  "theme": {
+    "switch": "Switch Theme",
+    "cyber": "Cyber",
+    "minimal": "Minimal",
+    "glass": "Glass",
+    "macaron": "Macaron"
+  },
+  "locale": {
+    "switch": "中",
+    "switchTo": "Chinese"
+  }
+}

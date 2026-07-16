@@ -1,0 +1,99 @@
+@import "tailwindcss";
+
+:root {
+  /* Minimal (default light) */
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #555555;
+  --accent: #2563eb;
+  --accent-hover: #1d4ed8;
+  --border: #e5e7eb;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 25px rgba(0,0,0,0.12);
+  --navbar-bg: rgba(255,255,255,0.8);
+  --card-hover: translateY(-4px);
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-theme="cyber"] {
+  --bg-primary: #0a0e1a;
+  --bg-secondary: #111827;
+  --bg-card: rgba(255,255,255,0.05);
+  --text-primary: #f0f0f0;
+  --text-secondary: #a0a0b8;
+  --accent: #00d4ff;
+  --accent-hover: #00b8db;
+  --border: rgba(0,212,255,0.2);
+  --shadow: 0 0 15px rgba(0,212,255,0.1);
+  --shadow-hover: 0 0 30px rgba(0,212,255,0.2);
+  --navbar-bg: rgba(10,14,26,0.85);
+  --card-hover: translateY(-4px);
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-theme="minimal"] {
+  --bg-primary: #fafafa;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #1a1a2e;
+  --text-secondary: #555555;
+  --accent: #1a1a2e;
+  --accent-hover: #333355;
+  --border: #e5e7eb;
+  --shadow: 0 1px 3px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 25px rgba(0,0,0,0.12);
+  --navbar-bg: rgba(255,255,255,0.8);
+  --card-hover: translateY(-4px);
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-theme="glass"] {
+  --bg-primary: #e8dff5;
+  --bg-secondary: rgba(255,255,255,0.15);
+  --bg-card: rgba(255,255,255,0.2);
+  --text-primary: #1a1a2e;
+  --text-secondary: #444466;
+  --accent: #6366f1;
+  --accent-hover: #4f46e5;
+  --border: rgba(255,255,255,0.3);
+  --shadow: 0 4px 15px rgba(0,0,0,0.08);
+  --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
+  --navbar-bg: rgba(255,255,255,0.2);
+  --card-hover: translateY(-4px);
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-theme="glass"] body,
+[data-theme="glass"] .glass-body-bg {
+  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 25%, #a6c1ee 50%, #fbc2eb 75%, #a18cd1 100%);
+  background-attachment: fixed;
+}
+
+[data-theme="macaron"] {
+  --bg-primary: #f0faf4;
+  --bg-secondary: #ffffff;
+  --bg-card: #ffffff;
+  --text-primary: #2d4a3e;
+  --text-secondary: #5a7a6e;
+  --accent: #55c6a0;
+  --accent-hover: #45b08c;
+  --border: #d4ede0;
+  --shadow: 0 1px 3px rgba(85,198,160,0.1);
+  --shadow-hover: 0 8px 25px rgba(85,198,160,0.15);
+  --navbar-bg: rgba(240,250,244,0.85);
+  --card-hover: translateY(-4px);
+  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+/* Smooth theme transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: var(--font-family);
+}

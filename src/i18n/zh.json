@@ -1,0 +1,67 @@
+{
+  "nav": {
+    "about": "关于我",
+    "skills": "技能",
+    "timeline": "经历",
+    "guestbook": "留言板",
+    "social": "社交",
+    "home": "首页"
+  },
+  "home": {
+    "greeting": "你好，我是",
+    "role": "大二学生 · 热爱技术",
+    "roleEnFallback": "Sophomore · Tech Enthusiast",
+    "subtitle": "欢迎来到我的个人空间",
+    "viewAll": "查看全部",
+    "moreSocial": "更多社交账号",
+    "cards": {
+      "about": {
+        "title": "关于我",
+        "desc": "了解更多关于我的故事"
+      },
+      "skills": {
+        "title": "技能与课程",
+        "desc": "我学过的课程和掌握的技能"
+      },
+      "timeline": {
+        "title": "学习经历",
+        "desc": "我的教育背景时间线"
+      },
+      "guestbook": {
+        "title": "留言板",
+        "desc": "留下你想说的话"
+      }
+    }
+  },
+  "skills": {
+    "title": "技能与课程",
+    "all": "全部",
+    "semester": "学期",
+    "description": "描述"
+  },
+  "timeline": {
+    "title": "学习经历"
+  },
+  "guestbook": {
+    "title": "留言板",
+    "subtitle": "欢迎留下你的想法和建议"
+  },
+  "social": {
+    "title": "社交链接",
+    "subtitle": "你可以在这里找到我"
+  },
+  "footer": {
+    "copyright": "© 2026 {name}. All rights reserved."
+  },
+  "theme": {
+    "switch": "切换主题",
+    "cyber": "科技风",
+    "minimal": "简约风",
+    "glass": "玻璃拟态",
+    "macaron": "马卡龙"
+  },
+  "locale": {
+    "switch": "EN",
+    "switchTo": "English"
+  }
+}
