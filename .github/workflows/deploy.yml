@@ -26,8 +26,11 @@ jobs:
       - name: Build Next.js app
         run: npm run build
 
+      - name: List .next build output
+        run: find .next/server -type d | head -30
+
       - name: Transform with OpenNext Cloudflare
-        run: npx opennextjs-cloudflare build --skipNextBuild
+        run: npx opennextjs-cloudflare build --skipNextBuild 2>&1
 
       - name: Deploy to Cloudflare Workers
         uses: cloudflare/wrangler-action@v3
