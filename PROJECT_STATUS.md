@@ -74,23 +74,26 @@ src/
 - `public/_headers` - Cloudflare 静态资源缓存头
 - `.dev.vars` - Cloudflare 开发环境变量（不提交到 git）
 
-## 当前状态：等待 Cloudflare 部署
+## 当前状态：已部署到 Cloudflare Workers
 
-已完成 Cloudflare Workers 的所有配置：
+部署已完成！GitHub Actions CI/CD 自动构建并部署到 Cloudflare Workers。
 
 - @opennextjs/cloudflare 适配器已安装
 - wrangler.jsonc 配置文件已创建
-- 构建测试通过（`npx opennextjs-cloudflare build` 成功）
+- GitHub Actions workflow 已配置（`.github/workflows/deploy.yml`）
+- **部署状态：成功**（Run #7 构建 + 部署全部通过）
 
-**用户需要做的操作：**
+**重要修复记录：**
 
-1. 代码已提交至 GitHub，仓库路径为 `D:\SJTU\Doc\JuCai_Website\personal-website`
-2. 如需重新推送：在项目目录执行 `git add -A && git commit -m "..." && git push origin main`
-3. 在 Cloudflare Dashboard (dash.cloudflare.com) 连接 GitHub 仓库并部署
-4. Cloudflare 构建设置：
-   - Framework preset: Next.js（可能需要选 None 自定义）
-   - Build command: `npx opennextjs-cloudflare build`
-   - 如使用 Cloudflare Git 集成自动部署，需要设置环境变量或使用 `wrangler deploy`
+- Next.js 16 的 `proxy.ts` 不支持 `runtime` 配置，OpenNext 需要 Edge Middleware
+- 解决方案：使用 `middleware.ts` + `config.runtime = 'experimental-edge'`
+- 此配置在 Next.js 16 中仍然可用（deprecated 但未移除）
+
+**项目路径：** `D:\SJTU\Doc\JuCai_Website\personal-website`
+
+**GitHub 仓库：** https://github.com/ImJc917/JuCai-Website
+
+**后续推送：** 任何 push 到 `main` 分支都会自动触发部署
 
 ## 已知的待办事项（用户需要后续配置）
 
