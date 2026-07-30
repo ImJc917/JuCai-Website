@@ -2,6 +2,7 @@
 
 :root {
   /* Minimal (default light) */
+  color-scheme: light;
   --bg-primary: #fafafa;
   --bg-secondary: #ffffff;
   --bg-card: #ffffff;
@@ -18,6 +19,7 @@
 }
 
 [data-theme="cyber"] {
+  color-scheme: dark;
   --bg-primary: #0a0e1a;
   --bg-secondary: #111827;
   --bg-card: rgba(255,255,255,0.05);
@@ -34,6 +36,7 @@
 }
 
 [data-theme="minimal"] {
+  color-scheme: light;
   --bg-primary: #fafafa;
   --bg-secondary: #ffffff;
   --bg-card: #ffffff;
@@ -50,6 +53,7 @@
 }
 
 [data-theme="glass"] {
+  color-scheme: light;
   --bg-primary: #e8dff5;
   --bg-secondary: rgba(255,255,255,0.15);
   --bg-card: rgba(255,255,255,0.2);
@@ -72,6 +76,7 @@
 }
 
 [data-theme="macaron"] {
+  color-scheme: light;
   --bg-primary: #f0faf4;
   --bg-secondary: #ffffff;
   --bg-card: #ffffff;
@@ -90,6 +95,10 @@
 /* Smooth theme transitions */
 * {
   transition: background-color 0.3s ease, color 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+html {
+  background-color: var(--bg-primary);
 }
 
 body {
