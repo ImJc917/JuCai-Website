@@ -51,7 +51,7 @@ export default function Navbar() {
                 href={item.path}
                 className="text-sm font-medium transition-colors duration-200 hover:opacity-70"
                 style={{
-                  color: pathname === (item.path === '/' ? `/${pathname.split('/')[1]}` : item.path)
+                  color: pathname === item.path
                     ? 'var(--accent)'
                     : 'var(--text-secondary)',
                 }}
@@ -100,10 +100,10 @@ export default function Navbar() {
                   onClick={() => setMobileOpen(false)}
                   className="px-3 py-2 rounded-lg text-sm font-medium transition-colors duration-200"
                   style={{
-                    color: pathname === (item.path === '/' ? `/${pathname.split('/')[1]}` : item.path)
+                    color: pathname === item.path
                       ? 'var(--accent)'
                       : 'var(--text-secondary)',
-                    backgroundColor: pathname === (item.path === '/' ? `/${pathname.split('/')[1]}` : item.path)
+                    backgroundColor: pathname === item.path
                       ? 'var(--bg-card)'
                       : 'transparent',
                   }}

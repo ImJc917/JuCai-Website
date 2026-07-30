@@ -1,16 +1,16 @@
 'use client';
 
+import { useLocale } from 'next-intl';
 import { useRouter, usePathname } from '@/i18n/navigation';
 
 export default function LocaleSwitch() {
   const router = useRouter();
   const pathname = usePathname();
+  const locale = useLocale();
 
   const toggleLocale = () => {
-    const currentLocale = pathname.split('/')[1];
-    const newLocale = currentLocale === 'zh' ? 'en' : 'zh';
-    const newPath = pathname.replace(`/${currentLocale}`, `/${newLocale}`);
-    router.replace(newPath);
+    const newLocale = locale === 'zh' ? 'en' : 'zh';
+    router.replace(pathname, { locale: newLocale });
   };
 
   return (
