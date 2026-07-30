@@ -9,29 +9,33 @@ export interface TimelineEntry {
 
 export const timeline: TimelineEntry[] = [
   {
-    school: "XX小学",
-    schoolEn: "XX Primary School",
+    school: "后海小学",
+    schoolEn: "Houhai Primary School",
     period: "2008 - 2014",
     periodEn: "2008 - 2014",
+    department: "广东省 · 深圳市",
+    departmentEn: "Shenzhen, Guangdong",
   },
   {
-    school: "XX初中",
-    schoolEn: "XX Middle School",
+    school: "育才三中",
+    schoolEn: "Yucai No.3 Middle School",
     period: "2014 - 2017",
     periodEn: "2014 - 2017",
+    department: "广东省 · 深圳市",
+    departmentEn: "Shenzhen, Guangdong",
   },
   {
-    school: "XX高中",
-    schoolEn: "XX High School",
+    school: "深圳中学",
+    schoolEn: "Shenzhen Middle School",
     period: "2017 - 2020",
     periodEn: "2017 - 2020",
+    department: "广东省 · 深圳市",
+    departmentEn: "Shenzhen, Guangdong",
   },
   {
-    school: "XX大学",
-    schoolEn: "XX University",
+    school: "上海交通大学",
+    schoolEn: "Shanghai Jiao Tong University",
     period: "2024 - 至今",
     periodEn: "2024 - Present",
-    department: "XX学院 · XX专业",
-    departmentEn: "School of XX · Major in XX",
   },
 ];

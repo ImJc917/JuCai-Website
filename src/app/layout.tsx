@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 export const metadata: Metadata = {
-  title: 'Personal Website',
-  description: 'My personal website',
+  title: 'JuCai',
+  description: '巨菜的个人网站',
 };
 
 export default function RootLayout({

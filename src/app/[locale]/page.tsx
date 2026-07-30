@@ -69,13 +69,10 @@ export default async function HomePage({
                 😊
               </div>
             </div>
-            <h1 className="text-4xl sm:text-5xl font-bold mb-3" style={{ color: 'var(--text-primary)' }}>
+            <h1 className="text-4xl sm:text-5xl font-bold mb-8" style={{ color: 'var(--text-primary)' }}>
               {isZh ? '你好，我是' : "Hi, I'm"}{' '}
-              <span style={{ color: 'var(--accent)' }}>YourName</span>
+              <span style={{ color: 'var(--accent)' }}>巨菜</span>
             </h1>
-            <p className="text-lg mb-8" style={{ color: 'var(--text-secondary)' }}>
-              {isZh ? '大二学生 · 热爱技术 · 欢迎来到我的个人空间' : 'Sophomore · Tech Enthusiast · Welcome to my space'}
-            </p>
           </ScrollFadeIn>
 
           {/* Featured Social Links */}

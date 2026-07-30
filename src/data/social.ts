@@ -29,7 +29,7 @@ export const socialLinks: SocialLink[] = [
   {
     platform: "邮箱",
     platformEn: "Email",
-    url: "mailto:your@email.com",
+    url: "mailto:imjc917@sjtu.edu.cn",
     icon: "email",
     featured: true,
     category: "邮箱/其他",
