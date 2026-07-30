@@ -71,7 +71,7 @@ export default async function HomePage({
             </div>
             <h1 className="text-4xl sm:text-5xl font-bold mb-8" style={{ color: 'var(--text-primary)' }}>
               {isZh ? '你好，我是' : "Hi, I'm"}{' '}
-              <span style={{ color: 'var(--accent)' }}>巨菜</span>
+              <span style={{ color: 'var(--accent)' }}>{isZh ? '巨菜' : 'JuCai'}</span>
             </h1>
           </ScrollFadeIn>
 
