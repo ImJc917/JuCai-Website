@@ -21,22 +21,19 @@ export default function GiscusComments() {
       ? 'dark'
       : 'light';
 
-    const giscusConfig = {
-      repo: 'ImJc917/JuCai-Website',
-      repoId: 'R_kgDOTadtyQ',
-      category: 'General',
-      categoryId: 'DIC_kwDOTadtyc4DCX_6',
-      mapping: 'pathname',
-      reactionsEnabled: '1',
-      emitMetadata: '0',
-      inputPosition: 'top',
-      lang: 'zh-CN',
-      theme: giscusTheme,
-    };
-
-    Object.entries(giscusConfig).forEach(([key, value]) => {
-      scriptEl.setAttribute(`data-${key}`, value);
-    });
+    // Use explicit data-attribute names with kebab-case
+    // Giscus expects data-repo-id and data-category-id (not data-repoId / data-categoryId)
+    scriptEl.setAttribute('data-repo', 'ImJc917/JuCai-Website');
+    scriptEl.setAttribute('data-repo-id', 'R_kgDOTadtyQ');
+    scriptEl.setAttribute('data-category', 'General');
+    scriptEl.setAttribute('data-category-id', 'DIC_kwDOTadtyc4DCX_6');
+    scriptEl.setAttribute('data-mapping', 'pathname');
+    scriptEl.setAttribute('data-strict', '0');
+    scriptEl.setAttribute('data-reactions-enabled', '1');
+    scriptEl.setAttribute('data-emit-metadata', '0');
+    scriptEl.setAttribute('data-input-position', 'top');
+    scriptEl.setAttribute('data-lang', 'zh-CN');
+    scriptEl.setAttribute('data-theme', giscusTheme);
 
     ref.current.appendChild(scriptEl);
   }, [theme]);
