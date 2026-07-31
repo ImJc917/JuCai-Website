@@ -2,7 +2,7 @@
 
 import { Link } from '@/i18n/navigation';
 import { motion } from 'framer-motion';
-import { User, BookOpen, Calendar, MessageSquare, Smile, Globe, Mail, ArrowRight } from 'lucide-react';
+import { User, BookOpen, Calendar, MessageSquare, Globe, Mail, ArrowRight } from 'lucide-react';
 import Navbar from '@/components/Navbar';
 import Footer from '@/components/Footer';
 import BackToTop from '@/components/BackToTop';
@@ -66,7 +66,7 @@ export default function HomeContent({ locale }: { locale: string }) {
                 className="w-full h-full flex items-center justify-center"
                 style={{ backgroundColor: 'var(--bg-card)', color: 'var(--accent)' }}
               >
-                <Smile className="w-14 h-14" />
+                <span style={{ fontSize: '3.5rem', lineHeight: 1 }}>🥦</span>
               </div>
             </motion.div>
             <h1 className="text-4xl sm:text-5xl font-bold mb-8" style={{ color: 'var(--text-primary)' }}>
