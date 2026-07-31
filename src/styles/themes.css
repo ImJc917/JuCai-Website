@@ -52,44 +52,26 @@
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
-[data-theme="glass"] {
-  color-scheme: light;
-  --bg-primary: #e8dff5;
-  --bg-secondary: rgba(255,255,255,0.15);
-  --bg-card: rgba(255,255,255,0.2);
-  --text-primary: #1a1a2e;
-  --text-secondary: #444466;
-  --accent: #6366f1;
-  --accent-hover: #4f46e5;
-  --border: rgba(255,255,255,0.3);
-  --shadow: 0 4px 15px rgba(0,0,0,0.08);
-  --shadow-hover: 0 8px 30px rgba(0,0,0,0.15);
-  --navbar-bg: rgba(255,255,255,0.2);
-  --card-hover: translateY(-4px);
-  --font-family: 'Inter', system-ui, -apple-system, sans-serif;
-}
-
-[data-theme="glass"] body,
-[data-theme="glass"] .glass-body-bg {
-  background: linear-gradient(135deg, #a18cd1 0%, #fbc2eb 25%, #a6c1ee 50%, #fbc2eb 75%, #a18cd1 100%);
-  background-attachment: fixed;
-}
-
 [data-theme="macaron"] {
   color-scheme: light;
-  --bg-primary: #f0faf4;
-  --bg-secondary: #ffffff;
-  --bg-card: #ffffff;
+  --bg-primary: #e8f5ec;
+  --bg-secondary: rgba(255,255,255,0.4);
+  --bg-card: rgba(255,255,255,0.45);
   --text-primary: #2d4a3e;
   --text-secondary: #5a7a6e;
   --accent: #55c6a0;
   --accent-hover: #45b08c;
-  --border: #d4ede0;
-  --shadow: 0 1px 3px rgba(85,198,160,0.1);
-  --shadow-hover: 0 8px 25px rgba(85,198,160,0.15);
-  --navbar-bg: rgba(240,250,244,0.85);
+  --border: rgba(255,255,255,0.5);
+  --shadow: 0 4px 15px rgba(85,198,160,0.1);
+  --shadow-hover: 0 8px 30px rgba(85,198,160,0.18);
+  --navbar-bg: rgba(232,245,236,0.6);
   --card-hover: translateY(-4px);
   --font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+[data-theme="macaron"] body {
+  background: linear-gradient(135deg, #d4f0dd 0%, #e8f5ec 25%, #c8e6d5 50%, #e8f5ec 75%, #d4f0dd 100%);
+  background-attachment: fixed;
 }
 
 /* Smooth theme transitions */

@@ -19,9 +19,7 @@ export default function GiscusComments() {
 
     const giscusTheme = theme === 'cyber'
       ? 'dark'
-      : theme === 'glass'
-        ? 'transparent_dark'
-        : 'light';
+      : 'light';
 
     const giscusConfig = {
       repo: 'ImJc917/JuCai-Website',

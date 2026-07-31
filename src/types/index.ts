@@ -1,3 +1,3 @@
-export type Theme = "cyber" | "minimal" | "glass" | "macaron";
+export type Theme = "cyber" | "minimal" | "macaron";
 
 export type Locale = "zh" | "en";

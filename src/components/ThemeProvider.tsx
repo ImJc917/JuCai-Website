@@ -3,7 +3,7 @@
 import { createContext, useContext, useEffect, useState, type ReactNode } from 'react';
 import type { Theme } from '@/types';
 
-const themes: Theme[] = ['minimal', 'cyber', 'glass', 'macaron'];
+const themes: Theme[] = ['minimal', 'cyber', 'macaron'];
 
 interface ThemeContextType {
   theme: Theme;

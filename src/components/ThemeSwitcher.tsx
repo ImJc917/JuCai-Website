@@ -1,13 +1,12 @@
 'use client';
 
-import { Moon, Sun, Gem, Leaf } from 'lucide-react';
+import { Moon, Sun, Leaf } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import { useTranslations } from 'next-intl';
 
 const themeIcons: Record<string, React.ReactNode> = {
   cyber: <Moon className="w-5 h-5" />,
   minimal: <Sun className="w-5 h-5" />,
-  glass: <Gem className="w-5 h-5" />,
   macaron: <Leaf className="w-5 h-5" />,
 };
 
