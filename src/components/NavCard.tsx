@@ -1,10 +1,12 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import { Link } from '@/i18n/navigation';
+import type { ReactNode } from 'react';
 
 interface NavCardProps {
   path: string;
-  icon: string;
+  icon: ReactNode;
   title: string;
   description: string;
 }
@@ -12,30 +14,28 @@ interface NavCardProps {
 export default function NavCard({ path, icon, title, description }: NavCardProps) {
   return (
     <Link href={path} className="block">
-      <div
-        className="p-6 rounded-xl cursor-pointer transition-all duration-300"
+      <motion.div
+        className="p-6 rounded-xl cursor-pointer overflow-hidden relative"
         style={{
           backgroundColor: 'var(--bg-card)',
           border: '1px solid var(--border)',
           boxShadow: 'var(--shadow)',
         }}
-        onMouseEnter={(e) => {
-          e.currentTarget.style.transform = 'translateY(-4px)';
-          e.currentTarget.style.boxShadow = 'var(--shadow-hover)';
-        }}
-        onMouseLeave={(e) => {
-          e.currentTarget.style.transform = 'translateY(0)';
-          e.currentTarget.style.boxShadow = 'var(--shadow)';
+        whileHover={{ y: -4 }}
+        transition={{
+          type: 'spring',
+          stiffness: 400,
+          damping: 25,
         }}
       >
-        <div className="text-3xl mb-3">{icon}</div>
+        <div className="mb-3" style={{ color: 'var(--accent)' }}>{icon}</div>
         <h3 className="text-xl font-semibold mb-1" style={{ color: 'var(--text-primary)' }}>
           {title}
         </h3>
         <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>
           {description}
         </p>
-      </div>
+      </motion.div>
     </Link>
   );
 }

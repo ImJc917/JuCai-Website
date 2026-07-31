@@ -12,13 +12,13 @@ export interface Skill {
 export interface SkillCategory {
   name: string;
   nameEn: string;
-  icon: string;
+  icon: string; // lucide icon name
 }
 
 export const categories: SkillCategory[] = [
-  { name: "数学", nameEn: "Mathematics", icon: "📐" },
-  { name: "编程", nameEn: "Programming", icon: "💻" },
-  { name: "通识", nameEn: "General Education", icon: "📚" },
+  { name: "数学", nameEn: "Mathematics", icon: "Triangle" },
+  { name: "编程", nameEn: "Programming", icon: "Code2" },
+  { name: "通识", nameEn: "General Education", icon: "BookOpen" },
 ];
 
 export const skills: Skill[] = [

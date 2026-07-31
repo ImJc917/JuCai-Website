@@ -1,5 +1,6 @@
 'use client';
 
+import { ArrowUp } from 'lucide-react';
 import { useTranslations } from 'next-intl';
 
 export default function Footer() {
@@ -21,14 +22,15 @@ export default function Footer() {
           </p>
           <button
             onClick={scrollToTop}
-            className="text-sm px-3 py-1 rounded-lg transition-colors duration-200 hover:opacity-70"
+            className="text-sm px-3 py-1.5 rounded-lg transition-colors duration-200 hover:opacity-70 flex items-center gap-1"
             style={{
               color: 'var(--accent)',
               backgroundColor: 'var(--bg-card)',
               border: '1px solid var(--border)',
             }}
           >
-            ↑ {t('copyright').includes('©') ? '回到顶部' : 'Back to Top'}
+            <ArrowUp className="w-3.5 h-3.5" />
+            {t('copyright').includes('©') ? '回到顶部' : 'Back to Top'}
           </button>
         </div>
       </div>

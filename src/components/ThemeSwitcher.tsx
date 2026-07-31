@@ -1,13 +1,14 @@
 'use client';
 
+import { Moon, Sun, Gem, Leaf } from 'lucide-react';
 import { useTheme } from './ThemeProvider';
 import { useTranslations } from 'next-intl';
 
-const themeIcons: Record<string, string> = {
-  cyber: '🌙',
-  minimal: '☀️',
-  glass: '💎',
-  macaron: '🌿',
+const themeIcons: Record<string, React.ReactNode> = {
+  cyber: <Moon className="w-5 h-5" />,
+  minimal: <Sun className="w-5 h-5" />,
+  glass: <Gem className="w-5 h-5" />,
+  macaron: <Leaf className="w-5 h-5" />,
 };
 
 export default function ThemeSwitcher() {
@@ -22,7 +23,7 @@ export default function ThemeSwitcher() {
       title={t('switch')}
       aria-label={t('switch')}
     >
-      <span className="text-lg">{themeIcons[theme]}</span>
+      <span style={{ color: 'var(--text-primary)' }}>{themeIcons[theme]}</span>
     </button>
   );
 }

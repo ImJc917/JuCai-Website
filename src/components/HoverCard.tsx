@@ -1,5 +1,6 @@
 'use client';
 
+import { motion } from 'framer-motion';
 import type { ReactNode } from 'react';
 
 interface HoverCardProps {
@@ -9,23 +10,24 @@ interface HoverCardProps {
 
 export default function HoverCard({ children, className = '' }: HoverCardProps) {
   return (
-    <div
-      className={`transition-all duration-300 ${className}`}
+    <motion.div
+      className={`${className}`}
       style={{
         backgroundColor: 'var(--bg-card)',
         border: '1px solid var(--border)',
         boxShadow: 'var(--shadow)',
       }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.transform = 'translateY(-2px)';
-        e.currentTarget.style.boxShadow = 'var(--shadow-hover)';
+      whileHover={{
+        y: -4,
+        boxShadow: 'var(--shadow-hover)',
       }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.transform = 'translateY(0)';
-        e.currentTarget.style.boxShadow = 'var(--shadow)';
+      transition={{
+        type: 'spring',
+        stiffness: 400,
+        damping: 25,
       }}
     >
       {children}
-    </div>
+    </motion.div>
   );
 }
