@@ -26,7 +26,7 @@ export default async function AboutPage({
             </h1>
           </ScrollFadeIn>
 
-          <ScrollFadeIn delay={100}>
+          <ScrollFadeIn delay={0.1}>
             <div
               className="p-8 rounded-xl leading-relaxed text-base"
               style={{

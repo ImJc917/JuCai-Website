@@ -30,7 +30,7 @@ export default async function GuestbookPage({
             </p>
           </ScrollFadeIn>
 
-          <ScrollFadeIn delay={100}>
+          <ScrollFadeIn delay={0.1}>
             <div
               className="p-6 rounded-xl"
               style={{
