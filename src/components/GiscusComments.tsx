@@ -8,25 +8,32 @@ export default function GiscusComments() {
   const { theme } = useTheme();
 
   useEffect(() => {
-    if (!ref.current || ref.current.hasChildNodes()) return;
+    if (!ref.current) return;
+    // Clear previous giscus instance on theme change
+    ref.current.innerHTML = '';
 
     const scriptEl = document.createElement('script');
     scriptEl.src = 'https://giscus.app/client.js';
     scriptEl.async = true;
     scriptEl.crossOrigin = 'anonymous';
 
-    // Giscus configuration - user needs to update these
+    const giscusTheme = theme === 'cyber'
+      ? 'dark'
+      : theme === 'glass'
+        ? 'transparent_dark'
+        : 'light';
+
     const giscusConfig = {
-      repo: 'your-username/your-repo',
-      repoId: 'YOUR_REPO_ID',
+      repo: 'ImJc917/JuCai-Website',
+      repoId: 'R_kgDOTadtyQ',
       category: 'General',
-      categoryId: 'YOUR_CATEGORY_ID',
+      categoryId: 'DIC_kwDOTadtyc4DCX_6',
       mapping: 'pathname',
       reactionsEnabled: '1',
       emitMetadata: '0',
       inputPosition: 'top',
       lang: 'zh-CN',
-      theme: theme === 'cyber' ? 'dark' : theme === 'glass' ? 'preferred_color_scheme' : theme === 'macaron' ? 'light' : 'light',
+      theme: giscusTheme,
     };
 
     Object.entries(giscusConfig).forEach(([key, value]) => {
@@ -37,20 +44,6 @@ export default function GiscusComments() {
   }, [theme]);
 
   return (
-    <div>
-      <p className="text-sm mb-4" style={{ color: 'var(--text-secondary)' }}>
-        留言板使用 Giscus，需要配置 GitHub 仓库才能使用。请参考{' '}
-        <a
-          href="https://giscus.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          style={{ color: 'var(--accent)' }}
-        >
-          giscus.app
-        </a>{' '}
-        进行配置，然后更新 <code>GiscusComments.tsx</code> 中的参数。
-      </p>
-      <div ref={ref} />
-    </div>
+    <div ref={ref} />
   );
 }
