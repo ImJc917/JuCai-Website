@@ -3,7 +3,7 @@
 import { useEffect, useRef } from 'react';
 import { useTheme } from './ThemeProvider';
 
-export default function GiscusComments() {
+export default function GiscusComments({ locale = 'zh' }: { locale?: string }) {
   const ref = useRef<HTMLDivElement>(null);
   const { theme } = useTheme();
 
@@ -21,22 +21,23 @@ export default function GiscusComments() {
       ? 'dark'
       : 'light';
 
-    // Use explicit data-attribute names with kebab-case
-    // Giscus expects data-repo-id and data-category-id (not data-repoId / data-categoryId)
+    // Use "specific" mapping with a fixed term so that all locale pages
+    // (e.g. /zh/guestbook and /en/guestbook) share the same discussion thread
     scriptEl.setAttribute('data-repo', 'ImJc917/JuCai-Website');
     scriptEl.setAttribute('data-repo-id', 'R_kgDOTadtyQ');
     scriptEl.setAttribute('data-category', 'General');
     scriptEl.setAttribute('data-category-id', 'DIC_kwDOTadtyc4DCX_6');
-    scriptEl.setAttribute('data-mapping', 'pathname');
+    scriptEl.setAttribute('data-mapping', 'specific');
+    scriptEl.setAttribute('data-term', 'guestbook');
     scriptEl.setAttribute('data-strict', '0');
     scriptEl.setAttribute('data-reactions-enabled', '1');
     scriptEl.setAttribute('data-emit-metadata', '0');
     scriptEl.setAttribute('data-input-position', 'top');
-    scriptEl.setAttribute('data-lang', 'zh-CN');
+    scriptEl.setAttribute('data-lang', locale === 'zh' ? 'zh-CN' : 'en');
     scriptEl.setAttribute('data-theme', giscusTheme);
 
     ref.current.appendChild(scriptEl);
-  }, [theme]);
+  }, [theme, locale]);
 
   return (
     <div ref={ref} />

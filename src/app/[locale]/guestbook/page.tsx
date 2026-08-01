@@ -39,7 +39,7 @@ export default async function GuestbookPage({
                 boxShadow: 'var(--shadow)',
               }}
             >
-              <GiscusComments />
+              <GiscusComments locale={locale} />
             </div>
           </ScrollFadeIn>
         </div>
